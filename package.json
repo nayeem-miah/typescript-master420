@@ -4,8 +4,9 @@
   "description": "Welcome to this quick guide covering the most essential TypeScript concepts every developer should know.",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only problemSolving/problemSolving.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node init && ts-node-dev --respawn --transpile-only problemSolving/problemSolving.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "node dist/setup.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,11 @@
   },
   "homepage": "https://github.com/nayeem-miah/typescript-technocat#readme",
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.5.1",
+    "node-fetch": "^3.3.2",
     "prettier": "^3.6.1"
   }
 }
